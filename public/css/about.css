@@ -1,0 +1,24 @@
+.bg-overlay-about {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(/images/office1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+
+}
+
+.title-about{
+    color: white;
+    text-align: center;
+    padding-top:100px;
+}
+.last-para{
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+
+}

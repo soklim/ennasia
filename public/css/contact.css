@@ -1,0 +1,23 @@
+#contact-us{
+    display: block;
+    line-height: 300px;
+    color: #ffffff;
+    text-align: center;
+}
+#main-contact{
+    height: 300px;
+    background-color: #88c002;
+    margin-top: 100px
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #main-contact{
+        height: 200px;
+
+    }
+    #contact-us{
+        line-height: 200px;
+    }
+
+}
