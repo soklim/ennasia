@@ -26,12 +26,16 @@ Route::get('/about-us', 'AboutController@index')->name('about');
 Route::get('/contact-us', 'ContactController@index')->name('contact');
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('table-list', function () {
+	Route::get('category-list', function () {
 		return view('pages.table_list');
 	})->name('table');
+
+    Route::resource('admin/category','CategoryController');
+    Route::resource('admin/content','ContentController');
 
 	Route::get('typography', function () {
 		return view('pages.typography');

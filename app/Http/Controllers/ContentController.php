@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Content;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class ContentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,6 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $cat = Category::all();
-        return view('admin.category.index',compact("cat"));
-
     }
 
     /**
@@ -28,7 +25,6 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('admin.category.create');
     }
 
     /**
@@ -45,10 +41,10 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\category  $category
+     * @param  \App\Content  $content
      * @return \Illuminate\Http\Response
      */
-    public function show(category $category)
+    public function show(Content $content)
     {
         //
     }
@@ -56,43 +52,33 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\category  $category
+     * @param  \App\Content  $content
      * @return \Illuminate\Http\Response
      */
-
-    public function edit($id)
+    public function edit(Content $content)
     {
-        $cat = Category::findOrFail($id);
-
-        return view('admin.category.edit',compact('cat'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\category  $category
+     * @param  \App\Content  $content
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Content $content)
     {
         //
-        $cat =category::findOrFail($id);
-
-        $input =$request->all();
-
-        $cat->update($input);
-
-        return redirect('/admin/category');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\category  $category
+     * @param  \App\Content  $content
      * @return \Illuminate\Http\Response
      */
-    public function destroy(category $category)
+    public function destroy(Content $content)
     {
         //
     }

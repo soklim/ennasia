@@ -44,7 +44,7 @@
       </li>
       @endif
       <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
+        <a class="nav-link" href="{{ route('category.index') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Category List') }}</p>
         </a>
@@ -52,7 +52,7 @@
       <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('typography') }}">
           <i class="material-icons">library_books</i>
-            <p>{{ __('Typography') }}</p>
+            <p>{{ __('Content') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
@@ -61,12 +61,12 @@
           <p>{{ __('Control Item') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('map') }}">
-          <i class="material-icons">location_ons</i>
-            <p>{{ __('Content') }}</p>
-        </a>
-      </li>
+      {{--<li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">--}}
+        {{--<a class="nav-link" href="{{ route('map') }}">--}}
+          {{--<i class="material-icons">location_ons</i>--}}
+            {{--<p>{{ __('Content') }}</p>--}}
+        {{--</a>--}}
+      {{--</li>--}}
 
 
     </ul>

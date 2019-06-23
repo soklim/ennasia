@@ -16,8 +16,15 @@
     <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
-    {{--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>--}}
-    {{--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>--}}
+
+        <!-- Bootstrap core CSS-->
+        {{--<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
+
+        <!-- Page level plugin CSS-->
+        <link href="/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        {{--<link href="/css/sb-admin.css" rel="stylesheet">--}}
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
@@ -146,6 +153,17 @@
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="{{ asset('material') }}/demo/demo.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="/js/sb-admin.min.js"></script>
+
+
+        <!-- Page level plugin JavaScript-->
+        <script src="/vendor/datatables/jquery.dataTables.js"></script>
+        <script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+        <!-- Demo scripts for this page-->
+        <script src="/js/demo/datatables-demo.js"></script>
         @stack('js')
     </body>
 </html>

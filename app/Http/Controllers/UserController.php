@@ -77,6 +77,7 @@ class UserController extends Controller
         return redirect()->route('user.index')->withStatus(__('User successfully updated.'));
     }
 
+
     /**
      * Remove the specified user from storage
      *
