@@ -25,10 +25,10 @@
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>Cambodia</li>
                                         <li>
                                             <i class="fa fa-calendar" aria-hidden="true"></i><span id="current_date"></span></li>
+                                        {{--<li>--}}
+                                            {{--<i class="fa fa-clock-o" aria-hidden="true"></i>Last Update 11.30 am</li>--}}
                                         <li>
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i>Last Update 11.30 am</li>
-                                        <li>
-                                            <i class="fa fa-cloud" aria-hidden="true"></i>29&#8451; Sydney, Australia</li>
+                                            <i class="fa fa-cloud" aria-hidden="true"></i>29&#8451; Phnom Penh, Cambodia</li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-3 d-none d-lg-block">
@@ -69,15 +69,15 @@
                                 <div class="row d-flex align-items-center">
                                     <div class="col-lg-4">
                                         <div class="logo-area">
-                                            <a href="index.html" class="img-fluid">
-                                                <img src="img/favicon2.png" alt="logo">
+                                            <a href="{!! url('/') !!}" class="footer-logo img-fluid">
+                                                <img src="/img/favicon2.png" alt="logo">
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-8 col-md-12">
                                         <div class="ne-banner-layout1 pull-right">
                                             <a href="#">
-                                                <img src="img/banner/banner2.jpg" alt="ad" class="img-fluid">
+                                                <img src="/images/advertising/vigor.png" alt="ad" class="img-fluid">
                                             </a>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@
                                             <nav id="dropdown">
                                                 <ul>
                                                     <li class="active">
-                                                        <a href="#" class="menu_title">ទំព័រដើម</a>
+                                                        <a href="{!! url('/') !!}" class="menu_title">ទំព័រដើម</a>
                                                     </li>
                                                     <li>
                                                         <a href="#" class="menu_title">សេដ្ឋកិច្ច</a>
@@ -133,24 +133,24 @@
                                                         </button>
                                                     </form>
                                                 </li>
-                                                <li class="d-none d-sm-block d-md-block d-lg-none">
-                                                    <button type="button" class="login-btn" data-toggle="modal" data-target="#myModal">
-                                                        <i class="fa fa-user" aria-hidden="true"></i>Sign in
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <div id="side-menu-trigger" class="offcanvas-menu-btn offcanvas-btn-repoint">
-                                                        <a href="#" class="menu-bar">
-                                                            <span></span>
-                                                            <span></span>
-                                                            <span></span>
-                                                        </a>
-                                                        <a href="#" class="menu-times close">
-                                                            <span></span>
-                                                            <span></span>
-                                                        </a>
-                                                    </div>
-                                                </li>
+                                                {{--<li class="d-none d-sm-block d-md-block d-lg-none">--}}
+                                                    {{--<button type="button" class="login-btn" data-toggle="modal" data-target="#myModal">--}}
+                                                        {{--<i class="fa fa-user" aria-hidden="true"></i>Sign in--}}
+                                                    {{--</button>--}}
+                                                {{--</li>--}}
+                                                {{--<li>--}}
+                                                    {{--<div id="side-menu-trigger" class="offcanvas-menu-btn offcanvas-btn-repoint">--}}
+                                                        {{--<a href="#" class="menu-bar">--}}
+                                                            {{--<span></span>--}}
+                                                            {{--<span></span>--}}
+                                                            {{--<span></span>--}}
+                                                        {{--</a>--}}
+                                                        {{--<a href="#" class="menu-times close">--}}
+                                                            {{--<span></span>--}}
+                                                            {{--<span></span>--}}
+                                                        {{--</a>--}}
+                                                    {{--</div>--}}
+                                                {{--</li>--}}
                                             </ul>
                                         </div>
                                     </div>
@@ -171,8 +171,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <a href="index.html" class="footer-logo img-fluid">
-                            <img src="img/favicon2.png" alt="logo" class="img-fluid">
+                        <a href="{!! url('/') !!}" class="footer-logo img-fluid">
+                            <img src="/img/favicon2.png" alt="logo" class="img-fluid">
                         </a>
                         {{--<ul class="footer-social">--}}
                             {{--<li>--}}

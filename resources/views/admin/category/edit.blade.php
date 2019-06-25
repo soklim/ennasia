@@ -36,6 +36,15 @@
                     </div>
                   </div>
                 </div>
+                {{--<div class="row">--}}
+                  {{--<label class="col-sm-2 col-form-label">{{ __('Content') }}</label>--}}
+                  {{--<div class="col-sm-7">--}}
+                    {{--<div class="form-group{{ $errors->has('color') ? ' has-danger' : '' }}">--}}
+                      {{--<textarea class="form-control" id="summary-ckeditor" name="summary-ckeditor"></textarea>--}}
+                    {{--</div>--}}
+                  {{--</div>--}}
+                {{--</div>--}}
+
 
               <div class="card-footer ml-auto mr-auto">
                 <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>

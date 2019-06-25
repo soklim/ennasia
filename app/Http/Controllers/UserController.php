@@ -21,7 +21,8 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
-        return view('users.index', ['users' => $model->paginate(15)]);
+        $role = Role::all();
+        return view('users.index', ['users' => $model->paginate(15)],compact('role'));
     }
 
     /**
@@ -57,7 +58,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.edit', compact('user'));
+        $role = Role::all();
+        return view('users.edit', compact('user','role'));
     }
 
     /**

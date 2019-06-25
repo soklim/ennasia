@@ -38,4 +38,8 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function content(){
+        return $this->hasMany('App\Content');
+    }
 }

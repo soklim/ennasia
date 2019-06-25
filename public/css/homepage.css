@@ -1,3 +1,74 @@
-.menu_title{
-    font-family: "Kh Dangrek";
+@media only screen and (max-width: 767px) {
+    #topnews{
+        height: 250px;
+    }
+
+}
+@media only screen and (min-width: 768px) {
+    #topnews{
+        height: 365px;
+    }
+
+}
+#topSocail{
+    height: 250px;
+}
+#childSocial{
+    width: 94px;
+    height: 69px;
+}
+#MainEco{
+    height: 250px;
+}
+#MainTechno{
+    height: 150px;
+}
+
+/*Color of category*/
+.color-social:after {
+    background-color: #00A0B1;
+}
+.color-social:before {
+    border-top: 8px solid #00A0B1;
+    border-right: 8px solid transparent;
+}
+
+.color-economic:after {
+    background-color: #2E8DEF;
+}
+.color-economic:before {
+    border-top: 8px solid #2E8DEF;
+    border-right: 8px solid transparent;
+}
+
+.color-techno:after {
+    background-color: #BF1E4B;
+}
+.color-techno:before {
+    border-top: 8px solid #BF1E4B;
+    border-right: 8px solid transparent;
+}
+
+.color-health:after {
+    background-color: #643EBF;
+}
+.color-health:before {
+    border-top: 8px solid #643EBF;
+    border-right: 8px solid transparent;
+}
+
+.color-sport:after {
+    background-color: #05b71a;
+}
+.color-sport:before {
+    border-top: 8px solid #05b71a;
+    border-right: 8px solid transparent;
+}
+
+.color-policy:after {
+    background-color: #DC572E;
+}
+.color-policy:before {
+    border-top: 8px solid #DC572E;
+    border-right: 8px solid transparent;
 }

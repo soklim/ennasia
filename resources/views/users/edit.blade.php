@@ -43,6 +43,20 @@
                   </div>
                 </div>
                 <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Role') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group">
+                      <select class="form-control" name="role_id" required>
+                        <option value="{{$user->role_id}}">{{$user->role->name}}</option>
+                        @foreach($role as $role)
+                          <option value="{{$role->id}}">{{$role->name}}</option>
+                        @endforeach
+                      </select>
+                      {{--<input class="form-control" name="email" id="category" type="text" placeholder="{{ __('Category') }}" value="{{ old('category') }}" required />--}}
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
                   <label class="col-sm-2 col-form-label" for="input-password">{{ __(' Password') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">

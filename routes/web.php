@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.page.homepage');
-});
+//Route::get('/', function () {
+//    return view('front.page.homepage');
+//});
+Route::get('/', 'HomePageController@index');
 Route::get('/404error',function (){
     return view('admin.errors.error404');
 });
@@ -76,5 +77,9 @@ Route::group(['middleware'=>'IsAdmin'], function (){
     Route::resource('user', 'UserController');
 
 });
+
+Route::post('upload_image','CkeditorController@uploadImage')->name('upload');
+
+Route::get('/news-detail/{id}', 'HomePageController@newsdetail');
 
 

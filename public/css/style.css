@@ -59,10 +59,19 @@ h2,
 h3,
 h4 {
   line-height: 1.4;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kh Battambang', sans-serif;
   margin: 0 0 20px 0;
   color: #111111;
   text-transform: capitalize;
+}
+p {
+  font-family: 'Kh Battambang', sans-serif;
+}
+li span{
+  font-family: 'Kh Battambang', sans-serif;
+}
+li{
+  font-family: 'Kh Battambang', sans-serif;
 }
 h1 {
   font-size: 24px;
@@ -1431,7 +1440,7 @@ ul.item2-inline li:last-child {
   text-transform: capitalize;
   font-weight: 600;
   font-size: 18px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Kh Battambang', sans-serif;
   z-index: 2;
 }
 .topic-box-lg:before {
@@ -1465,6 +1474,7 @@ ul.item2-inline li:last-child {
   font-weight: 600;
   font-size: 11px;
   z-index: 2;
+  font-family: 'Kh Battambang', Sans-Serif;
 }
 .topic-box-sm:before {
   z-index: 1;
@@ -1626,15 +1636,16 @@ ul.item2-inline li:last-child {
 .color-apple .owl-controls .owl-next:hover i {
   color: #ffffff;
 }
-.color-cod-gray:before {
-  border-top: 8px solid #111111;
+.color-economic:before {
+  border-top: 8px solid #2E8DEF;
   border-right: 8px solid transparent;
 }
+
 .color-cod-gray:after {
-  background-color: #111111;
+  background-color: #d01a28;
 }
 .color-cod-gray .owl-controls i {
-  color: #111111;
+  color: #d01a28;
 }
 .color-cod-gray .owl-controls .owl-nav {
   background-color: transparent;
@@ -2270,7 +2281,7 @@ ul.item2-inline li:last-child {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kh Battambang', sans-serif;
 }
 .btn-tab li a {
   background-color: #f8f8f8;

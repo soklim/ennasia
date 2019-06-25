@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\category;
 use App\Content;
+use App\Photo;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 class ContentController extends Controller
 {
     /**
@@ -15,6 +18,9 @@ class ContentController extends Controller
     public function index()
     {
         //
+        $content = Content::all();
+        $cat = category::all();
+        return view('admin.content.index',compact("content","cat"));
     }
 
     /**
@@ -25,6 +31,9 @@ class ContentController extends Controller
     public function create()
     {
         //
+        $cat = category::all();
+        return view('admin.content.create',compact("cat"));
+
     }
 
     /**
@@ -36,6 +45,29 @@ class ContentController extends Controller
     public function store(Request $request)
     {
         //
+
+        $user = Auth::user();
+        $input = $request->all();
+
+        $this->validate($request, [
+            'photo_id'  => 'required|image|mimes:,jpeg,jpg,png,gif|max:2048'
+        ]);
+
+        if($file = $request->file('photo_id'))
+        {
+            $name = time()  .$file->getClientOriginalName();
+
+//            $file->move('images',$name);
+            $file->move(public_path().'/images/', $name);
+
+            $photo = Photo::create(['file'=>$name]);
+
+            $input['photo_id'] = $photo->id;
+        }
+
+        $user->content()->create($input);
+
+        return redirect('/admin/content');
     }
 
     /**
@@ -47,6 +79,7 @@ class ContentController extends Controller
     public function show(Content $content)
     {
         //
+
     }
 
     /**
@@ -55,9 +88,12 @@ class ContentController extends Controller
      * @param  \App\Content  $content
      * @return \Illuminate\Http\Response
      */
-    public function edit(Content $content)
+    public function edit($id)
     {
         //
+        $content = Content::findOrFail($id);
+        $cat = category::all();
+        return view('admin.content.edit',compact('content','cat'));
     }
 
     /**
@@ -67,9 +103,27 @@ class ContentController extends Controller
      * @param  \App\Content  $content
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Content $content)
+    public function update(Request $request, $id)
     {
         //
+        $content =Content::findOrFail($id);
+
+        $input =$request->all();
+
+
+        if($file = $request->file('photo_id'))
+        {
+            $name = time()  .$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name);
+            $photo = Photo::create(['file'=>$name]);
+            $input['photo_id'] = $photo->id;
+
+        }
+
+
+        $content->update($input);
+
+        return redirect('/admin/content');
     }
 
     /**
@@ -81,5 +135,8 @@ class ContentController extends Controller
     public function destroy(Content $content)
     {
         //
+        $content->delete();
+
+        return redirect()->route('content.index')->withStatus(__('Content successfully deleted.'));
     }
 }
