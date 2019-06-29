@@ -46,12 +46,10 @@
                                         អត្តបទ៖ {{$post->user->name}}</a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>{{$post->created_at}}</a>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;{{$post->created_at}}
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>202</a>
+                                        <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;{{$post->visitor}}
                                 </li>
                             </ul>
 

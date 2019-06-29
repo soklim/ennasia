@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Content;
 use App\SysStatic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomePageController extends Controller
 {
@@ -40,6 +41,10 @@ class HomePageController extends Controller
 
     public function newsdetail($id)
     {
+//        $results = DB::statement('call UpdateVisitor(?,)',[$id]);
+        DB::select(DB::raw("CALL UpdateVisitor($id)"));
+
+
         $sys1 = SysStatic::where('id',1)->get();
         $sys2 = SysStatic::where('id',2)->get();
         $sys3 = SysStatic::where('id',3)->get();
