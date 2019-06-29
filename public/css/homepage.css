@@ -23,6 +23,9 @@
 #MainTechno{
     height: 150px;
 }
+#PopContent{
+    height: 100px;
+}
 
 /*Color of category*/
 .color-social:after {

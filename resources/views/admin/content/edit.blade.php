@@ -53,7 +53,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Title') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="title" type="text" placeholder="{{ __('Title') }}" value="{{ old('title', $content->title) }}" required="true" aria-required="true"/>
+                      <input class="form-control" maxlength="290" name="title" type="text" placeholder="{{ __('Title') }}" value="{{ old('title', $content->title) }}" required="true" aria-required="true"/>
                     </div>
                   </div>
                 </div>
@@ -74,21 +74,19 @@
                 <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('Feature Image') }}</label>
                   <input type="file" accept="image/*" name="photo_id"​​ id="photo_id">
-
-
-                  <div class="col-sm-7">
-                    <div class="form-group">
-                      <div class="card-footer ml-auto mr-auto">
-                        <button type="submit" class="btn btn-primary">{{ __('Publish') }}</button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group">
                       <textarea class="form-control" id="summary-ckeditor" name="content" >{{ old('content', $content->content) }}</textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <div class="card-footer ml-auto mr-auto">
+                      <button type="submit" class="btn btn-primary">{{ __('Publish') }}</button>
                     </div>
                   </div>
                 </div>

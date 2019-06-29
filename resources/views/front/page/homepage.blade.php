@@ -6,13 +6,13 @@
     <section class="container">
         <div class="bg-body box-layout">
             <br>
+            @foreach($sys4 as $sys4)
             <div class="row no-gutters d-flex align-items-center">
-                <img src="/images/advertising/Shampoo_1.jpg">
+                <img src="{{$sys4->photo?$sys4->photo->file:'https://via.placeholder.com/1140x140'}}" alt="ad" class="img-fluid">
             </div>
-            <br>
-            <div class="row no-gutters d-flex align-items-center">
-                <img src="/images/advertising/Pak_Chong_2.jpg">
-            </div>
+                <br>
+            @endforeach
+
         </div>
     </section>
 
@@ -109,7 +109,7 @@
                                                 </ul>
                                             </div>
                                             <h3 class="title-semibold-dark size-lg mb-15">
-                                                <a href="single-news-1.html">{{str_limit($topSocial->title,80)}}</a>
+                                                <a href="{!! url('news-detail/'. $topSocial->id) !!}">{{str_limit($topSocial->title,80)}}</a>
                                             </h3>
                                         </div>
                                         @endforeach
@@ -257,7 +257,7 @@
                                             </ul>
                                         </div>
                                         <h3 class="title-semibold-dark size-lg mb-15">
-                                            <a href="{!! url('news-detail/'. $top6Techno->id) !!}">{{$top6Techno->title}}</a>
+                                            <a href="{!! url('news-detail/'. $top6Techno->id) !!}">{{str_limit($top6Techno->title,90)}}</a>
                                         </h3>
                                     </div>
                                 </div>
@@ -273,116 +273,73 @@
                         </div>
                         <div class="sidebar-box">
                             <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
+                                <div class="fb-page"
+                                     data-href="https://www.facebook.com/ENN-Asia-Channel-448905582610301/"
+                                     data-width="380"
+                                     data-hide-cover="false"
+                                     data-show-facepile="false"></div>
                             </div>
                         </div>
+
+                        @foreach($sys6 as $sys6)
                         <div class="sidebar-box">
                             <div class="ne-banner-layout1 text-center">
                                 <a href="#">
-                                    <img src="img/banner/banner3.jpg" alt="ad" class="img-fluid">
+                                    <img src="{{$sys6->photo?$sys6->photo->file:'https://via.placeholder.com/370x278'}}" alt="ad" class="img-fluid">
                                 </a>
                             </div>
                         </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
+                        {{--<div class="sidebar-box">--}}
+                            {{--<div class="ne-banner-layout1 text-center">--}}
+                                {{--<a href="#">--}}
+                                    {{--<img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="sidebar-box">--}}
+                            {{--<div class="ne-banner-layout1 text-center">--}}
+                                {{--<a href="#">--}}
+                                    {{--<img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="sidebar-box">--}}
+                            {{--<div class="ne-banner-layout1 text-center">--}}
+                                {{--<a href="#">--}}
+                                    {{--<img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="sidebar-box">--}}
+                            {{--<div class="ne-banner-layout1 text-center">--}}
+                                {{--<a href="#">--}}
+                                    {{--<img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="sidebar-box">
                             <div class="topic-border color-cod-gray mb-30">
                                 <div class="topic-box-lg color-cod-gray">ពត៌មានថ្មីៗ</div>
                             </div>
-                            <div class="img-overlay-70 img-scale-animate">
-                                <img src="img/news/news233.jpg" alt="news" class="img-fluid width-100">
-                                <div class="topic-box-top-sm">
-                                    <div class="topic-box-sm color-cod-gray mb-20">Swiming</div>
-                                </div>
-                                <div class="mask-content-xs">
-                                    <div class="post-date-light">March 15, 2017</div>
-                                    <h2 class="title-medium-light size-lg">
-                                        <a href="single-news-1.html">Rosie White are Habits Career Art.Rosie Habits.</a>
-                                    </h2>
-                                </div>
-                            </div>
                             <div class="row">
+                                @foreach($popContent as $pop)
                                 <div class="col-6">
                                     <div class="mt-30">
                                         <div class="position-relative">
-                                            <a href="single-news-1.html" class="img-opacity-hover mb-10">
-                                                <img src="img/news/news250.jpg" alt="ad" class="img-fluid">
+                                            <a href="{!! url('news-detail/'. $pop->id) !!}" class="img-opacity-hover mb-10">
+                                                <img src="{{$pop->photo?$pop->photo->file:'https://via.placeholder.com/600x375'}}" alt="news" class="img-fluid width-100" id="PopContent">
                                             </a>
                                             <div class="topic-box-top-xs">
-                                                <div class="topic-box-sm color-cod-gray mb-20">Tenis</div>
+                                                <div class="topic-box-sm {{$pop->category->color}} mb-20">{{$pop->category->name}}</div>
                                             </div>
                                         </div>
                                         <h3 class="title-medium-dark size-md mb-none">
-                                            <a href="single-news-1.html">Haunts of the Hea Lans capes of Lynn Zirman Habits Career.</a>
+                                            <a href="{!! url('news-detail/'. $pop->id) !!}"> {{str_limit($pop->title,60)}}</a>
                                         </h3>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="mt-30">
-                                        <div class="position-relative">
-                                            <a href="single-news-1.html" class="img-opacity-hover mb-10">
-                                                <img src="img/news/news251.jpg" alt="ad" class="img-fluid">
-                                            </a>
-                                            <div class="topic-box-top-xs">
-                                                <div class="topic-box-sm color-cod-gray mb-20">Boxing</div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title-medium-dark size-md mb-none">
-                                            <a href="single-news-1.html">Haunts of the Hea Lans capes of Lynn Zirman Habits Career.</a>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mt-30">
-                                        <div class="position-relative">
-                                            <a href="single-news-1.html" class="img-opacity-hover mb-10">
-                                                <img src="img/news/news252.jpg" alt="ad" class="img-fluid">
-                                            </a>
-                                            <div class="topic-box-top-xs">
-                                                <div class="topic-box-sm color-cod-gray mb-20">Accessories</div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title-medium-dark size-md mb-none">
-                                            <a href="single-news-1.html">Haunts of the Hea Lans capes of Lynn Zirman Habits Career.</a>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mt-30">
-                                        <div class="position-relative">
-                                            <a href="single-news-1.html" class="img-opacity-hover mb-10">
-                                                <img src="img/news/news253.jpg" alt="ad" class="img-fluid">
-                                            </a>
-                                            <div class="topic-box-top-xs">
-                                                <div class="topic-box-sm color-cod-gray mb-20">Boat</div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title-medium-dark size-md mb-none">
-                                            <a href="single-news-1.html">Haunts of the Hea Lans capes of Lynn Zirman Habits Career.</a>
-                                        </h3>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
 
                         </div>

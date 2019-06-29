@@ -14,13 +14,13 @@
     <section class="container">
         <div class="bg-body box-layout">
             <br>
-            <div class="row no-gutters d-flex align-items-center">
-                <img src="/images/advertising/Shampoo_1.jpg">
-            </div>
-            <br>
-            <div class="row no-gutters d-flex align-items-center">
-                <img src="/images/advertising/Pak_Chong_2.jpg">
-            </div>
+            @foreach($sys4 as $sys4)
+                <div class="row no-gutters d-flex align-items-center">
+                    <img src="{{$sys4->photo?$sys4->photo->file:'https://via.placeholder.com/1140x140'}}" alt="ad" class="img-fluid">
+                </div>
+                <br>
+            @endforeach
+
         </div>
     </section>
     @foreach($singlecontent as $post)
@@ -68,41 +68,15 @@
                                 <div class="topic-box-lg color-cod-gray">ដៃគូផ្សព្វផ្សាយ</div>
                             </div>
                         </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
+                        @foreach($sys6 as $sys6)
+                            <div class="sidebar-box">
+                                <div class="ne-banner-layout1 text-center">
+                                    <a href="#">
+                                        <img src="{{$sys6->photo?$sys6->photo->file:'https://via.placeholder.com/370x278'}}" alt="ad" class="img-fluid">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="sidebar-box">
-                            <div class="ne-banner-layout1 text-center">
-                                <a href="#">
-                                    <img src="/img/banner/banner3.jpg" alt="ad" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>

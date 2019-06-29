@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="table-responsive">
-              <table class="table" id="dataTable">
+              <table class="table" id="dataTables">
                 <thead class=" text-primary">
                 <tr>
                   <th>ID</th>
@@ -32,7 +32,7 @@
                 @foreach($content as $content)
                   <tr>
                     <td scope="row">{{$content->id}}</td>
-                    <td>{{$content->title}}</td>
+                    <td>{{str_limit($content->title,40)}}</td>
                     <td>{{$content->category->name}}</td>
                     <td><img height="50px;" src="{{$content->photo?$content->photo->file:'https://via.placeholder.com/400x400'}}" alt=""></td>
                     <td>{{$content->created_at}}</td>
@@ -62,5 +62,12 @@
     </div>
   </div>
 </div>
-
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#dataTables').dataTable( {
+      "aaSorting": []
+    } );
+  });
+</script>
 @endsection

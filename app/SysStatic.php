@@ -12,6 +12,9 @@ class SysStatic extends Model
         'page',
         'value_en',
         'value_kh',
-        'file_id'
+        'photo_id'
     ];
+    public function photo(){
+        return $this->belongsTo('App\Photo','photo_id');
+    }
 }

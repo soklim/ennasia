@@ -53,7 +53,7 @@
                                     <label class="col-sm-2 col-form-label">{{ __('Title') }}</label>
                                     <div class="col-sm-7">
                                         <div class="form-group">
-                                            <input class="form-control" name="title" type="text" placeholder="{{ __('Title') }}" value="{{ old('Title') }}" required="true" aria-required="true"/>
+                                            <input class="form-control" maxlength="290" name="title" type="text" placeholder="{{ __('Title') }}" value="{{ old('Title') }}" required="true" aria-required="true"/>
                                         </div>
                                     </div>
                                 </div>
@@ -73,16 +73,7 @@
                                 </div>
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label">{{ __('Feature Image') }}</label>
-                                    <input type="file" accept="image/*" name="photo_id"​​ id="photo_id">
-
-
-                                    <div class="col-sm-7">
-                                        <div class="form-group">
-                                            <div class="card-footer ml-auto mr-auto">
-                                                <button type="submit" class="btn btn-primary">{{ __('Publish') }}</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <input type="file" accept="image/*" name="photo_id"​​ id="photo_id" required>
                                 </div>
 
                                 <div class="row">
@@ -91,6 +82,13 @@
                                                 <textarea class="form-control" id="summary-ckeditor" name="content"></textarea>
                                             </div>
                                         </div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                        <div class="card-footer ml-auto mr-auto">
+                                            <button type="submit" class="btn btn-primary">{{ __('Publish') }}</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -107,6 +105,9 @@
         window.onload = function() {
             CKEDITOR.replace( 'summary-ckeditor', {
                 filebrowserUploadUrl: '{{ route('upload',['_token' => csrf_token() ]) }}'
+                // filebrowserBrowseUrl: '/browser/browse.php',
+                // filebrowserImageBrowseUrl: '/browser/browse.php?type=Images',
+                // filebrowserImageUploadUrl: '/uploader/upload.php?type=Images'
             });
         };
     </script>

@@ -30,5 +30,5 @@
 <!-- For IE -->
 <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
 <!-- Modernizr Js -->
-<script src="js/modernizr-2.8.3.min.js"></script>
+<script src="/js/modernizr-2.8.3.min.js"></script>
 

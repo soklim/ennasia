@@ -18,7 +18,7 @@ class ContentController extends Controller
     public function index()
     {
         //
-        $content = Content::all();
+        $content = Content::orderBy('created_at','desc')->get();
         $cat = category::all();
         return view('admin.content.index',compact("content","cat"));
     }

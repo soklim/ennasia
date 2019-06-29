@@ -37,6 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('admin/category','CategoryController');
     Route::resource('admin/content','ContentController');
+    Route::resource('admin/sys_static','SysStaticController');
 
 	Route::get('typography', function () {
 		return view('pages.typography');
@@ -81,5 +82,7 @@ Route::group(['middleware'=>'IsAdmin'], function (){
 Route::post('upload_image','CkeditorController@uploadImage')->name('upload');
 
 Route::get('/news-detail/{id}', 'HomePageController@newsdetail');
+
+Route::get('/category/{id}', 'HomePageController@category');
 
 

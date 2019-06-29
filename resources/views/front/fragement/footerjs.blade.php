@@ -26,3 +26,7 @@
 <script src="/js/ticker.js " type="text/javascript"></script>
 <!-- Custom Js -->
 <script src="/js/main.js " type="text/javascript"></script>
+
+<script>
+
+</script>
