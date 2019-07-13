@@ -38,30 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('admin/category','CategoryController');
     Route::resource('admin/content','ContentController');
     Route::resource('admin/sys_static','SysStaticController');
+    Route::resource('admin/real_estate','Real_EstateController');
 
-	Route::get('typography', function () {
-		return view('pages.typography');
-	})->name('typography');
-
-	Route::get('icons', function () {
-		return view('pages.icons');
-	})->name('icons');
-
-	Route::get('map', function () {
-		return view('pages.map');
-	})->name('map');
-
-	Route::get('notifications', function () {
-		return view('pages.notifications');
-	})->name('notifications');
-
-	Route::get('rtl-support', function () {
-		return view('pages.language');
-	})->name('language');
-
-	Route::get('upgrade', function () {
-		return view('pages.upgrade');
-	})->name('upgrade');
 });
 
 
@@ -84,5 +62,7 @@ Route::post('upload_image','CkeditorController@uploadImage')->name('upload');
 Route::get('/news-detail/{id}', 'HomePageController@newsdetail');
 
 Route::get('/category/{id}', 'HomePageController@category');
+Route::get('/real_estate', 'HomePageController@real_estate');
+Route::get('/real_estate/{id}', 'HomePageController@real_estate_detail');
 
 

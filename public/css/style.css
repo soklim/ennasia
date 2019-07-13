@@ -46,7 +46,7 @@ html {
 body {
   font-size: 16px;
   line-height: 24px;
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
   vertical-align: baseline;
   background-color: #e6e8eb;
   color: #444444;
@@ -59,19 +59,19 @@ h2,
 h3,
 h4 {
   line-height: 1.4;
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
   margin: 0 0 20px 0;
   color: #111111;
   text-transform: capitalize;
 }
 p {
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
 }
 li span{
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
 }
 li{
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
 }
 h1 {
   font-size: 24px;
@@ -1440,7 +1440,7 @@ ul.item2-inline li:last-child {
   text-transform: capitalize;
   font-weight: 600;
   font-size: 18px;
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
   z-index: 2;
 }
 .topic-box-lg:before {
@@ -1474,7 +1474,7 @@ ul.item2-inline li:last-child {
   font-weight: 600;
   font-size: 11px;
   z-index: 2;
-  font-family: 'Kh Battambang', Sans-Serif;
+  font-family: 'Battambang', Sans-Serif;
 }
 .topic-box-sm:before {
   z-index: 1;
@@ -2281,7 +2281,7 @@ ul.item2-inline li:last-child {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
 }
 .btn-tab li a {
   background-color: #f8f8f8;
@@ -3351,7 +3351,7 @@ div#wrapper.open > .offcanvas-mask {
 .main-menu-area .ne-main-menu nav ul li a {
   color: #ffffff;
   display: block;
-  font-family: 'Kh Battambang', sans-serif;
+  font-family: 'Battambang', sans-serif;
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
@@ -3916,7 +3916,7 @@ div#wrapper.open > .offcanvas-mask {
 .mean-container .mean-bar .mean-nav ul li a {
   color: #111111;
   font-weight: 700;
-  font-family: "Kh Battambang";
+  font-family: "Battambang";
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;

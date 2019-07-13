@@ -42,4 +42,8 @@ class User extends Authenticatable
     public function content(){
         return $this->hasMany('App\Content');
     }
+
+    public function real_estate(){
+        return $this->hasMany('App\Realestate');
+    }
 }

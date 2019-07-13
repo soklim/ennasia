@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Content;
+use App\Realestate;
 use App\SysStatic;
+use App\Thumbnail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,12 +21,12 @@ class HomePageController extends Controller
         $term2 = "sponsor horizontal";
         $sys4 = SysStatic::where('static_name','LIKE',"%{$term2}%")->get();
 
-
         $sys6 = SysStatic::where('static_name','LIKE',"%{$term}%")->get();
 
         $popContent=Content::where('isActive',0)->orderBy('created_at','desc')->get()->take(10);
 
         $topContent=Content::where('isActive',0)->orderBy('created_at','desc')->get()->take(1);
+
         $mainContent=Content::where('isActive',0)->orderBy('created_at','desc')->limit(4)->offset(1)->get();
 
         $topSocial=Content::where('isActive',0)->where('category_id',1)->orderBy('created_at','desc')->get()->take(1);
@@ -72,5 +74,38 @@ class HomePageController extends Controller
         $top = Content::where('category_id',$id)->orderBy('created_at','desc')->get()->take(1);
 
         return view('front.page.category',compact('sys1','sys2','sys3','sys4','sys6','category','top'));
+    }
+
+    public function real_estate()
+    {
+        $sys1 = SysStatic::where('id',1)->get();
+        $sys2 = SysStatic::where('id',2)->get();
+        $sys3 = SysStatic::where('id',3)->get();
+        $term = "sponsor vertical";
+        $term2 = "sponsor horizontal";
+        $sys4 = SysStatic::where('static_name','LIKE',"%{$term2}%")->get();
+        $sys6 = SysStatic::where('static_name','LIKE',"%{$term}%")->get();
+
+        $reals = Realestate::orderBy('created_at','desc')->paginate(8);
+
+
+        return view('front.page.real_estate',compact('sys1','sys2','sys3','sys4','sys6','reals'));
+    }
+
+    public function real_estate_detail($id)
+    {
+        $sys1 = SysStatic::where('id',1)->get();
+        $sys2 = SysStatic::where('id',2)->get();
+        $sys3 = SysStatic::where('id',3)->get();
+        $term = "sponsor vertical";
+        $term2 = "sponsor horizontal";
+        $sys4 = SysStatic::where('static_name','LIKE',"%{$term2}%")->get();
+        $sys6 = SysStatic::where('static_name','LIKE',"%{$term}%")->get();
+
+        $real = Realestate::where('id',$id)->get();
+        $thumbnail = Thumbnail::where('realeastate_id',$id)->get()->take(4);
+
+
+        return view('front.page.real_estate_detail',compact('sys1','sys2','sys3','sys4','sys6','real','thumbnail'));
     }
 }

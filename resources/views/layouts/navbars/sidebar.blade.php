@@ -63,6 +63,12 @@
           <p>{{ __('Control Item') }}</p>
         </a>
       </li>
+      <li class="nav-item{{ $activePage == 'real_estate' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('real_estate.index') }}">
+          <i class="material-icons">bubble_chart</i>
+          <p>{{ __('Real Estate') }}</p>
+        </a>
+      </li>
       {{--<li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">--}}
         {{--<a class="nav-link" href="{{ route('map') }}">--}}
           {{--<i class="material-icons">location_ons</i>--}}

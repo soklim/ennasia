@@ -20,7 +20,6 @@
                 </div>
                 <br>
             @endforeach
-
         </div>
     </section>
     @foreach($singlecontent as $post)
