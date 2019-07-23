@@ -33,43 +33,43 @@
                             <div id="hidecontent" style="display: none">
                                 {{$real->description}}
                             </div>
-                        <div class="container">
-                            <div class="card">
-                                <div class="container-fliud">
-                                    <div class="wrapper row">
-                                        <div class="preview col-md-6">
-                                            <div class="preview-pic tab-content">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="container-fliud">
+                                        <div class="wrapper row">
+                                            <div class="preview col-md-6">
+                                                <div class="preview-pic tab-content">
 
-                                                <div class="tab-pane active" id="pic-0"><img src="{{$real->photo?$real->photo->file:'https://via.placeholder.com/445x280'}}" alt="real estate" class="img-fluid width-100" style="height: 280px;"></div>
-                                                @foreach($thumbnail as $thumb)
-                                                <div class="tab-pane" id="pic-{{$thumb->id}}"><img src="{{$thumb->file?$thumb->file:'https://via.placeholder.com/445x280'}}" alt="real estate" class="img-fluid width-100" style="height: 280px;"></div>
-                                                @endforeach
+                                                    <div class="tab-pane active" id="pic-0"><img src="{{$real->photo?$real->photo->file:'https://via.placeholder.com/445x280'}}" alt="real estate" class="img-fluid width-100" style="height: 280px;"></div>
+                                                    @foreach($thumbnail as $thumb)
+                                                        <div class="tab-pane" id="pic-{{$thumb->id}}"><img src="{{$thumb->file?$thumb->file:'https://via.placeholder.com/445x280'}}" alt="real estate" class="img-fluid width-100" style="height: 280px;"></div>
+                                                    @endforeach
+                                                </div>
+                                                <ul class="preview-thumbnail nav nav-tabs">
+                                                    <li class="active"><a data-target="#pic-0" data-toggle="tab"><img src="{{$real->photo?$real->photo->file:'https://via.placeholder.com/80x50'}}" alt="real estate" class="img-fluid width-100" style="height: 50px;"></a></li>
+                                                    @foreach($thumbnail as $thumb)
+                                                        <li><a data-target="#pic-{{$thumb->id}}" data-toggle="tab"><img src="{{$thumb->file?$thumb->file:'https://via.placeholder.com/80x50'}}" alt="real estate" class="img-fluid width-100" style="height: 50px;"></a></li>
+                                                    @endforeach
+                                                </ul>
+
                                             </div>
-                                            <ul class="preview-thumbnail nav nav-tabs">
-                                                <li class="active"><a data-target="#pic-0" data-toggle="tab"><img src="{{$real->photo?$real->photo->file:'https://via.placeholder.com/80x50'}}" alt="real estate" class="img-fluid width-100" style="height: 50px;"></a></li>
-                                                @foreach($thumbnail as $thumb)
-                                                    <li><a data-target="#pic-{{$thumb->id}}" data-toggle="tab"><img src="{{$thumb->file?$thumb->file:'https://via.placeholder.com/80x50'}}" alt="real estate" class="img-fluid width-100" style="height: 50px;"></a></li>
-                                                @endforeach
-                                            </ul>
+                                            <div class="details col-md-6">
+                                                <h3 class="product-title">{{$real->title}}</h3>
+                                                <div class="rating">
+                                                    <span class="review-no"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;{{$real->visitor}}</span>
+                                                </div>
 
-                                        </div>
-                                        <div class="details col-md-6">
-                                            <h3 class="product-title">{{$real->title}}</h3>
-                                            <div class="rating">
-                                                <span class="review-no"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;{{$real->visitor}}</span>
+                                                <h4 class="price">តម្លៃ: <span><strong>{{$real->price}}$</strong></span></h4>
+                                                <h4 class=""><strong>{{$real->Province->province}}</strong></h4>
+                                                <h4 class=""><strong>ទីតាំង:</strong> <span>{{$real->location}}</span></h4>
+
+                                                <h4 class="price">លេខទូរស័ព្ទ: <span>{{$real->phone}}</span></h4>
+
                                             </div>
-
-                                            <h4 class="price">តម្លៃ: <span><strong>{{$real->price}}$</strong></span></h4>
-                                            <h4 class=""><strong>{{$real->Province->province}}</strong></h4>
-                                            <h4 class=""><strong>ទីតាំង:</strong> <span>{{$real->location}}</span></h4>
-
-                                            <h4 class="price">លេខទូរស័ព្ទ: <span>{{$real->phone}}</span></h4>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                             <div class="container">
                                 <div class="desc">
                                     <div class="container-fliud">
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
 
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>

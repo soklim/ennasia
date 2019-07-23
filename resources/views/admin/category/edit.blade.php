@@ -50,6 +50,7 @@
                 <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
               </div>
             </div>
+            </div>
           </form>
         </div>
       </div>
